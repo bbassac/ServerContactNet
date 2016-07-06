@@ -47,10 +47,21 @@ namespace ServerNet.Controllers
         {
             if (item == null)
             {
-                return BadRequest();
+                for (int i = 0; i < 5; i++)
+                {
+                    Contacts c1 = new Contacts();
+                    c1.FirstName = "Contact " + i;
+                    c1.MobilePhone = Guid.NewGuid().ToString();
+                    ContactsRepo.Save(c1);
+                }
+
+                return new NoContentResult();
             }
-            ContactsRepo.Add(item);
-            return CreatedAtRoute("GetContacts", new { Controller = "Contacts", id = item.Id }, item);
+            else
+            {
+                ContactsRepo.Save(item);
+                return CreatedAtRoute("GetContacts", new { Controller = "Contacts", id = item.Id }, item);
+            }
         }
 
         [HttpPut("{id}")]

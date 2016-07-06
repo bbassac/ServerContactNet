@@ -10,7 +10,7 @@ namespace ServerNet.Repository
     {
         static List<Contacts> ContactsList = new List<Contacts>();
         Random r = new Random();
-        public void Add(Contacts item)
+        public void Save(Contacts item)
         {
             item.Id =r.Next(1,int.MaxValue-1);
             ContactsList.Add(item);

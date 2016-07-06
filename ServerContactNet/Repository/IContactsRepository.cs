@@ -8,7 +8,7 @@ namespace ServerNet.Repository
 {
     public interface IContactsRepository
     {
-        void Add(Contacts item);
+        void Save(Contacts item);
         IEnumerable<Contacts> GetAll();
         Contacts Find(long key);
         void Remove(long Id);
