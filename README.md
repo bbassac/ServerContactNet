@@ -9,5 +9,3 @@
 > POST vide sur http://localhost:5000/api/Contacts -> Doit retourner un 204 : no Content
 > GET sur http://localhost:5000/api/Contacts retourne la liste des contacts 
 > GET sur http://localhost:5000/api/Contacts/{id} retourne le détail d'un contact
-
-
