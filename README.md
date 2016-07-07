@@ -6,12 +6,8 @@
  - Executer un "docker build -t server ." pour générer l'image docker
  - Executer un "docker run -p 5000:5000 server" pour éxécuter l'image docker
 
-> POST vide sur http://localhost:5000/api/Contacts -> Doit retourner un
-> 204 : no Content GET sur http://localhost:5000/api/Contacts retourne
-> la liste des contacts GET sur http://localhost:5000/api/Contacts/{id}
-> retourne le détail d'un contact
-
-
-
+> POST vide sur http://localhost:5000/api/Contacts -> Doit retourner un 204 : no Content
+> GET sur http://localhost:5000/api/Contacts retourne la liste des contacts 
+> GET sur http://localhost:5000/api/Contacts/{id} retourne le détail d'un contact
 
 
